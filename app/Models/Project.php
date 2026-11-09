@@ -20,6 +20,7 @@ class Project extends Model
         'category',
         'role',
         'thumbnail_path',
+        'gallery_images',
         'short_description',
         'detailed_description',
         'tech_stack',
@@ -35,6 +36,7 @@ class Project extends Model
      * @var array<string, string>
      */
     protected $casts = [
+        'gallery_images' => 'array',
         'tech_stack' => 'array',
         'is_featured' => 'boolean',
         'order_column' => 'integer',
@@ -48,6 +50,7 @@ class Project extends Model
     protected function casts(): array
     {
         return [
+            'gallery_images' => 'array',
             'tech_stack' => 'array',
             'is_featured' => 'boolean',
             'order_column' => 'integer',
